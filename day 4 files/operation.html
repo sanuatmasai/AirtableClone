@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    *{
+        padding: 0px;
+        margin: 0;
+        font-family: 'GT Eesti Display',-apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+    }
+    #container {
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+    #container > div:first-child {
+        background-color: #ffe6e6;
+        text-align: center;
+        padding: 11px;
+        font-size: 14px;
+        font-weight: 100;
+    }
+    #container span {
+        color: #b30047;
+        font-weight: 600;
+    } 
+    #container > div:last-child {
+        /* background-color: yellow; */
+        display: flex;
+        justify-content: space-between;
+        padding: 17px 0px;
+        background-color: white;
+    } 
+    #first {
+        /* background-color: aqua; */
+        display: flex;
+        align-items: center;
+    }
+    #first > img {
+        width: 20%;
+        margin: 0px 20px;
+    }
+    #second {
+        /* background-color: #b30047; */
+        display: flex;
+        align-items: center;
+    }
+    #container button {
+        margin : 0px 10px;
+        font-weight: 600;
+        font-size: 16px;
+        background-color: white;
+        border: 0px;
+
+    }
+    #second > button {
+        padding : 9px;
+        border-radius: 10px;
+        font-size: 17px;
+    }
+    #second > button:nth-child(2) {
+        color: white;
+        background-color: blue;
+        border: 0px;
+    }
+    #second > button:last-child {
+        border: 0px white;
+    }
+    #second > button:first-child {
+        border: 1px solid black;
+    }
+    #mid1 {
+        background-color: rgb(33, 66, 36);
+        text-align: center;
+        padding: 60px 50px 40px 50px;
+    }
+    #mid1 div {
+        width: 61%;
+        margin: auto;
+    }
+    #mid1  button {
+        color: white;
+        background-color: blue;
+        border: 0px;
+        font-size: 20px;
+        padding: 6px 13px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+    #mid2 {
+        padding-top: 100px;
+        padding-bottom: 70px;
+        background-color: rgb(255, 255, 255);
+    }
+    #inn {
+        display: flex;
+        width: 78%;
+        margin: auto;
+        justify-content: space-between;
+    }
+    #mid3, #mid4{
+        display: flex;
+        background-color:#f2f4f7;;
+        padding: 100px 200px;
+        
+    }
+    #mid3 h1, #mid4 h1{
+        font-size: 47px;
+        margin-bottom: 24px;
+    }
+    #mid3 div:first-child {
+        width: 39%;
+        color: rgb(46, 46, 46);
+        margin-right: 45px;
+        margin-top: 80px;
+    }
+    #mid3 p, #mid4 p, #mid5 p{
+        font-size: 19px;
+        margin-bottom: 53px;
+    }
+    #mid3 button, #mid4 button:last-child, #mid2 button{
+        color: blue;
+        background-color: #f2f4f7;;
+        font-size: 18.5px;
+        border: 0px;
+        font-weight: 600;
+        margin-bottom: 105px;
+
+    }
+    #mid4 div:last-child {
+        width: 39%;
+        color: rgb(46, 46, 46);
+        margin-left: 80px;
+        margin-top: 80px;
+    }
+    #pic {
+        display: flex;
+        background-color: rgb(240, 246, 255);
+    }
+    #pic > div {
+        width: 12%;
+        margin: auto;
+        padding-left: 30px;
+    }
+    #pic > div > img:hover {
+        width: 70%;
+    }
+    #bt {
+        color: white;
+        background-color: blue;
+        border: 0px;
+        font-size: 20px;
+        padding: 6px 13px;
+        border-radius: 8px; 
+        
+    }
+    #ddd {
+        display: grid;
+        align-items: center;
+        height: 100px;
+        padding-top: 50px;
+        /* padding : 100px 10px 1px 10px; */
+    }
+    #ander {
+        display: flex;
+        justify-content: space-around;
+        /* opacity: 0.3;
+        z-index: 1000; */
+    }
+    #ander > div {
+        padding: 10px;
+        width: 17%;
+        background-color: white;
+        border-radius: 5px;
+        padding: 25px;
+        font-weight: 500;
+    }
+    #footer {
+        display: flex;
+        border-top: 3px groove gray;
+        width: 95%;
+        margin: auto;
+    }
+    #part1 {
+        padding: 70px 50px;
+    }
+    
+    #part1 > h4 {
+        padding: 20px 0px ;
+    }
+    .division {
+        margin: auto;
+        margin-top: 75px;;
+    }
+    .division h4 {
+        padding-bottom: 20px;
+    }
+    .division h5 {
+        color: gray;
+        line-height: 23px;
+    }
+    .division h5:hover {
+        color: blue;
+    }
+    .footer-bottom {
+        background-color: #f2f4f7;;
+        display: flex;
+        padding-left: 30px;
+    }
+    .footer-bottom div {
+        padding: 10px;
+    }
+    .footer-bottom div:hover {
+        color: blue;
+    }
+    #iii {
+        border-radius: 7px;
+        border: 1px solid black;
+    }
+    #iii:hover {
+        border: 2px solid blue;
+        padding: 5px;
+    }
+    #part1 > img {
+        width: 50%;
+    }
+</style>
+<body>
+    <div id="container">
+        <div>Learn how to build visual and interactive apps using Interface Designer <span> &nbsp Watch webinar ></span></div>
+        <div>
+            <div id="first">
+                <img src="image/logo.jpg" />
+                <button>Product ></button>        
+                <button>Solutions ></button>
+                <button>Pricing</button>
+                <button>Enterprise</button>
+                <bu tton>Resources ></bu>
+            </div>
+            <div id="second">
+                <button>Contact sales</button>
+                <button>Sign up for free</button>
+                <button>Sign in</button>
+            </div>
+        </div>
+    </div> 
+    <div id="mid1">
+        <h1 style="font-size: 65px; color: white">Forward-thinking operations teams build on Airtable</h1>
+        <div>
+            <p style="font-size: 20px; font-weight: 600; margin-bottom: 30px; color: white">Bring all your data together, create and standardize your workflows, and hit ambitious business goals.</p>
+            <button>Sign up for free</button>
+            <p style="font-size: 20px; font-weight: 600; margin-bottom: 30px; color: white">No credit card needed</p>
+        </div>
+    </div>
+    <div id="mid2">
+        <div id="inn">
+            <div style="width: 40%">
+                <h1 style="font-size: 48px;"> Visualize your most important data in one place</h1>
+            </div>
+            <div style="width: 43%">
+                <p style="font-size: 25px; font-weight: 500;"> Set up automations that increase efficiency and help you standardize how requests get made and orders get fulfilled.</p>
+            </div>
+        </div>
+        <img src="https://images.ctfassets.net/wl95ljfippl8/6U38zfJK6K7rxHMyMiIn6r/d7858b078ed3a37d5207a98f3b0e23fd/functions-lp_ops_headline_1x.png?w=1920"  style="width: 100%; margin-top: 20px;"/>
+    </div>
+    <div id="mid3">
+        <div>
+            <h1>Streamline ordering, work requests, and fulfillment</h1>
+            <p>Spot gaps and timing conflicts, stay agile as requirements and timelines shift, and make updates to your plan as needed to hit deadlines.</p> 
+            <button>Explore the product →</button>
+        </div>
+        <div>
+            <img style="width:660PX; height:500PX"
+             src="https://images.ctfassets.net/wl95ljfippl8/1KqTisbbNymDvO3Fm43zQg/780e05ca8b8212657615d3cd46a6da44/functions-lp_ops_feature-1_1x_v2.png?w=1920">
+            </img>
+        </div>
+    </div>
+    <div id="mid4">
+        <div>
+            <img style="width:660PX; height:500PX"
+             src="https://images.ctfassets.net/wl95ljfippl8/YlpMqJqv4y3LYVi2h2x5k/a835ac333f36c1e4ef281d8411ff936a/functions-lp_ops_feature-2_1x.png?w=1920">
+            </img>
+        </div>
+        <div>
+            <h1>Keep initiatives on track as work changes</h1>
+            <p>Easily share status updates and keep leadership informed on progress with customizable dashboards that track what’s most important.</p> 
+            <button>Learn more about Interface Designer →</button>
+        </div>
+    </div>
+    <div id="mid3">
+        <div>
+            <h1>Create real-time dashboards</h1>
+            <p>Audit vendors, programs, and processes based on performance data to ensure you make the right decisions for your business.</p> 
+            <button>Explore the product →</button>
+        </div>
+        <div>
+            <img style="width:660PX; height:500PX"
+             src="https://images.ctfassets.net/wl95ljfippl8/2AGFSHEkXIwYKxRtgNZhJ4/fa74e6ad94ecb4240ef9c4687fdbb332/Group_1238__1_.png?w=1920">
+            </img>
+        </div>
+    </div>
+    <div id="mid4">
+        <div>
+            <img style="width:660PX; height:500PX"
+             src="https://images.ctfassets.net/wl95ljfippl8/2m9Qs9xfsRLKuaYfXWLqgi/dd95776f54854867e4ef06a5a340c1ac/Group_1239.png?w=1920">
+            </img>
+        </div>
+        <div>
+            <h1>Make data-driven decisions</h1>
+            <p>Create custom interfaces that give each and every teammate the relevant information they need, and a simple way to take action.</p> 
+            <button>Learn more about Interface Designer →</button>
+        </div>
+    </div>
+    <div id="mid2" style="background-color: rgb(240, 246, 255)">
+        <div id="inn">
+            <div style="width: 40%">
+                <h1 style="font-size: 48px;"> Create the perfect solution for each workflow</h1>
+            </div>
+            <div style="width: 43%">
+                <p style="font-size: 25px; font-weight: 500;"> Integrate with your existing tech stack, add additional power with pre-built apps, and write your own scripts to extend Airtable to fit your exact needs.</p>
+                <button style="margin-top: 30px; background-color: rgb(240, 246, 255);">Explore the product →</button>
+            </div>
+        </div>
+        <div id="pic">
+            <div>
+                <img src="https://images.ctfassets.net/wl95ljfippl8/2MxZeGo27v9m5n1sIOdxoJ/8cdf44f496c96b6baf2c60b93dfe45ae/App-Scripting.svg?w=1920" />
+            </div>
+            <div>
+                <img src="https://images.ctfassets.net/wl95ljfippl8/1AuWjIaH0nDqIYD3JI5l5j/9715d7b8df3168ff73e246d57428427f/App-Chart.svg?w=1920" />
+            </div>
+            <div>
+                <img src="https://images.ctfassets.net/wl95ljfippl8/2y9k4EX4CjupnoqzMxbQ0G/a1062ec08df7d4267a5e8455df281999/App-PageDesigner.svg?w=1920" />
+            </div>
+            <div>
+                <img src="https://images.ctfassets.net/wl95ljfippl8/vZGAzaOVnFv83xek2OTRF/9995aa4c5271a8f5fdb08d2bc36f80a1/App-JiraCloud.svg?w=1920" />
+            </div>
+            <div>
+                <img src="https://images.ctfassets.net/wl95ljfippl8/3XOotSEynwGLtxbLNMQtT5/ef2bd3270cf34ff442315664bf7ca120/App-Salesforce.svg?w=1920" />
+            </div>
+            <div>
+                <img src="https://images.ctfassets.net/wl95ljfippl8/46F9IPs4dtAC16NE5pxpTQ/53b9dd3893e797cf49d4f7ce01684e5a/App-Google.svg?w=1920" />
+            </div>
+            <div>
+                <img src="https://images.ctfassets.net/wl95ljfippl8/6Dc0GszbUKllA96pOJUQsK/e642ae02b9b841a3a73bb33f99616c2d/App-Wordpress_2x.png?w=1920"  style="width: 60%"/>
+            </div>
+            <div>
+                <img src="https://images.ctfassets.net/wl95ljfippl8/7jYSS3fFrJOOX87kbH9Gut/e71cd61844476f7eaa725adbb9118647/App-Slack.svg?w=1920" />
+            </div>
+        </div>
+    </div>
+    
+    <div id="mid2" id="miiid" style="background-color:#d3ebd5; ">
+        <div id="inn">
+            <div style="width: 50%">
+                <h1 style="font-size: 35px; padding-bottom: 70px;"> Use cases<br>
+                    Manage your most important business processes</h1>
+            </div>
+            <div style="width: 43%; " >
+                <p style="font-size: 20px; font-weight: 500;">From OKRs and SLAs to inventory and vendor management, Airtable can handle your team’s most important processes. Start with pre-made templates to get up and running faster.</p>
+            </div>
+        </div>
+    </div>
+    <div id="ander" style="background-color: transparent; margin-top: -72.5px; margin-bottom: -72.5px">
+        <div>
+            <i class="fa fa-home" aria-hidden="true"></i>
+            <p style="margin-bottom: 20px; margin-top: 10px"> Inventory management</p>
+            <p style="color:blue"> Use template</p>
+        </div>
+        <div>
+            <i class="fa fa-truck" aria-hidden="true"></i>
+            <p style="margin-bottom: 20px; margin-top: 10px">Vendor management</p>
+            <p style="color:blue"> Use template</p>
+        </div>
+        <div>
+            <i class="fa fa-flag-checkered" aria-hidden="true"></i>
+            <p style="margin-bottom: 20px; margin-top: 10px">OKR/Goal management</p>
+            <p style="color:blue"> Use template</p>
+        </div>
+        <div>
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+            <p style="margin-bottom: 20px; margin-top: 10px">Contanct management</p>
+            <p style="color:blue"> Use template</p>
+        </div>
+    </div>    
+    <div id="mid2" style="background-color: rgb(33, 66, 36); padding-bottom: 8px; z-index: 10; color: white">
+        <div id="inn">
+            <div style="width: 60%">
+                <h1 style="font-size: 35px; padding-top: 50px">Take control of your business processes</h1>
+            </div>
+            <div id="ddd" style="width: 25%">
+                <button id="bt" style="background-color:blue; color: white;">Sign up for free</button>
+            </div>
+        </div>
+    </div> 
+    <div id="mid3">
+        <div>
+            <h1>Start building in Airtable today</h1>
+            <p>Audit vendors, programs, and processes based on performance data to ensure you make the right decisions for your business.</p> 
+            <button>Explore the product →</button>
+        </div>
+        <div>
+            <img style="width:750PX; height:500PX"
+             src="https://images.ctfassets.net/wl95ljfippl8/1nRs2talQCsjsOohN5dXeA/ebf827aeb701ffe78c54ca0543a194a8/Group_1332.png?w=1920">
+            </img>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div>Product</div>
+        <div>Solution</div>
+        <div>Pricing</div>
+        <div>Enterpris</div>
+        <div>Contact Sales</div>
+    </div>
+    <div id="footer">
+        <div id="part1">
+            <img src="image/logo.jpg" />
+            <h4>Contact</h4>
+            <h5>Address:<span style="color: grey; font-family: Times, Times New Roman Georgia, serif; font-size: 16px;">562 Wellington Road, Street 32, San Francisco</span></h5>
+            <h5>Phone:<span style="color: grey; font-family: Times, Times New Roman Georgia, serif; font-size: 16px;">+01 2222 365 /(+91) 01 2345 6789</span></h5>
+            <h5>Hours:<span style="color: grey; font-family: Times, Times New Roman Georgia, serif; font-size: 16px;">10:00 - 18:00. Mon - Sat</span></h5>
+            <h4>Follow Us</h4>
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+        </div>
+        <div class="division">
+            <h4>About</h4>
+            <h5>Delivery Information</h5>
+            <h5>Privacy Policy</h5>
+            <h5>Terms & Condition</h5>
+            <h5>About Us</h5>
+            <h5>Contact Us</h5>
+        </div>
+        <div class="division">
+            <h4>My Account</h4>
+            <h5>Sign in</h5>
+            <h5>View Cart</h5>
+            <h5>My Wishlist</h5>
+            <h5>Track My Order</h5>
+            <h5>Help</h5>
+        </div>
+        <div class="division">
+            <h4>Install App</h4>
+            <h5>From App Store or Google Play</h5>
+            <img id="iii" src="file:///C:/Users/SANU%2021/Desktop/E-commerce%20project/img/pay/app.jpg" />
+            <img id="iii" src="file:///C:/Users/SANU%2021/Desktop/E-commerce%20project/img/pay/play.jpg" />
+
+            <h5>Secured Payment Gateways</h5>
+            <img src="file:///C:/Users/SANU%2021/Desktop/E-commerce%20project/img/pay/pay.png" style="margin-top: 15px;"/>
+        </div>
+    </div>   
+</body>
+</html>    

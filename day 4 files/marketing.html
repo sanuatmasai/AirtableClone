@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0px;
+        margin: 0;
+        font-family: 'GT Eesti Display',-apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+    }
+    #container {
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+    #container > div:first-child {
+        background-color: #ffe6e6;
+        text-align: center;
+        padding: 11px;
+        font-size: 14px;
+        font-weight: 100;
+    }
+    #container span {
+        color: #b30047;
+        font-weight: 600;
+    } 
+    #container > div:last-child {
+        /* background-color: yellow; */
+        display: flex;
+        justify-content: space-between;
+        padding: 17px 0px;
+        background-color: white;
+    } 
+    #first {
+        /* background-color: aqua; */
+        display: flex;
+        align-items: center;
+    }
+    #first > img {
+        width: 20%;
+        margin: 0px 20px;
+    }
+    #second {
+        /* background-color: #b30047; */
+        display: flex;
+        align-items: center;
+    }
+    #container button {
+        margin : 0px 10px;
+        font-weight: 600;
+        font-size: 16px;
+        background-color: white;
+        border: 0px;
+
+    }
+    #second > button {
+        padding : 9px;
+        border-radius: 10px;
+        font-size: 17px;
+    }
+    #second > button:nth-child(2) {
+        color: white;
+        background-color: blue;
+        border: 0px;
+    }
+    #second > button:last-child {
+        border: 0px white;
+    }
+    #second > button:first-child {
+        border: 1px solid black;
+    }
+    #mid1 {
+        background-color: #8b46ff;
+        font-size: 25px;
+    }
+    #mid1 > div {
+        width: 33.3%;
+        text-align: left;
+        margin: auto;
+        padding: 50px 0px;
+        color: white;
+    }
+    #mid2 {
+        width: 31%;
+        margin: auto;
+        text-align: left;
+        font-size: 20px;
+        padding: 50px 0px;
+        font-weight: 500;
+    }
+    #inbox {
+        display: flex;
+        padding: 25px;
+        border-radius: 7px;
+    }
+    #inbox:hover {
+        border: 3px solid gray;
+    }
+    #mid3 {
+        width: 70%;
+        margin: auto;
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px
+    }
+    #bb22 {
+        margin-left: 20px;
+        padding: 20px;
+    }
+    #footer{
+        display: flex;
+        border-top: 3px groove gray;
+        width: 95%;
+        margin: auto;
+    }
+    #part1 {
+        padding: 70px 50px;
+    }
+    
+    #part1 > h4 {
+        padding: 20px 0px ;
+    }
+    .division {
+        margin: auto;
+        margin-top: 75px;;
+    }
+    .division h4 {
+        padding-bottom: 20px;
+    }
+    .division h5 {
+        color: gray;
+        line-height: 23px;
+    }
+    .division h5:hover {
+        color: blue;
+    }
+    .footer-bottom {
+        display: flex;
+        padding-left: 30px;
+    }
+    .footer-bottom div {
+        padding: 10px;
+    }
+    .footer-bottom div:hover {
+        color: blue;
+    }
+    #iii {
+        border-radius: 7px;
+        border: 1px solid black;
+    }
+    #iii:hover {
+        border: 2px solid blue;
+        padding: 5px;
+    }
+    #part1 > img {
+        width: 50%;
+    }
+</style>
+<body>
+    <div id="container">
+        <div>Learn how to build visual and interactive apps using Interface Designer <span> &nbsp Watch webinar ></span></div>
+        <div>
+            <div id="first">
+                <img src="image/logo.jpg" />
+                <button>Product ></button>        
+                <button>Solutions ></button>
+                <button>Pricing</button>
+                <button>Enterprise</button>
+                <bu tton>Resources ></bu>
+            </div>
+            <div id="second">
+                <button>Contact sales</button>
+                <button>Sign up for free</button>
+                <button>Sign in</button>
+            </div>
+        </div>
+    </div> 
+    <div id="mid1">
+        <div>
+            <h2 style="margin-bottom: 20px">Automate your work</h2>
+            <p style="line-height: 32px">Connect Airtable with your favorite apps and services. Integrations help you automatically move information back and forth between Airtable and other apps.</p>
+        </div>
+    </div>
+    <div id="mid2">
+        <p style="margin-bottom: 22px">Airtable has built-in support for many popular apps and a robust <span style="color:blue">API.</span></p>
+        <p>Use <span style="color:blue">Zapier, Workato, Integromat, or Tray.io</span> to connect Airtable with over 1000 websites and apps.</p>
+    </div>
+    <div id="mid3"> </div>
+    <div id="mid2">
+        <p>Don't see an integration you'd like? <span style="color:blue">Add your request</span> to be among the first to know when it's available.</p>
+    </div>
+    <div class="footer-bottom">
+        <div>Product</div>
+        <div>Solution</div>
+        <div>Pricing</div>
+        <div>Enterpris</div>
+        <div>Contact Sales</div>
+    </div>
+    <div id="footer">
+        <div id="part1">
+            <img src="image/logo.jpg" />
+            <h4>Contact</h4>
+            <h5>Address:<span style="color: grey; font-family: Times, Times New Roman Georgia, serif; font-size: 16px;">562 Wellington Road, Street 32, San Francisco</span></h5>
+            <h5>Phone:<span style="color: grey; font-family: Times, Times New Roman Georgia, serif; font-size: 16px;">+01 2222 365 /(+91) 01 2345 6789</span></h5>
+            <h5>Hours:<span style="color: grey; font-family: Times, Times New Roman Georgia, serif; font-size: 16px;">10:00 - 18:00. Mon - Sat</span></h5>
+            <h4>Follow Us</h4>
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+        </div>
+        <div class="division">
+            <h4>About</h4>
+            <h5>Delivery Information</h5>
+            <h5>Privacy Policy</h5>
+            <h5>Terms & Condition</h5>
+            <h5>About Us</h5>
+            <h5>Contact Us</h5>
+        </div>
+        <div class="division">
+            <h4>My Account</h4>
+            <h5>Sign in</h5>
+            <h5>View Cart</h5>
+            <h5>My Wishlist</h5>
+            <h5>Track My Order</h5>
+            <h5>Help</h5>
+        </div>
+        <div class="division">
+            <h4>Install App</h4>
+            <h5>From App Store or Google Play</h5>
+            <img id="iii" src="file:///C:/Users/SANU%2021/Desktop/E-commerce%20project/img/pay/app.jpg" />
+            <img id="iii" src="file:///C:/Users/SANU%2021/Desktop/E-commerce%20project/img/pay/play.jpg" />
+
+            <h5>Secured Payment Gateways</h5>
+            <img src="file:///C:/Users/SANU%2021/Desktop/E-commerce%20project/img/pay/pay.png" style="margin-top: 15px;"/>
+        </div>
+    </div>
+</body>
+<script>
+    array= [
+        {
+            pic: "https://dl.airtable.com/SdycaqNcTvenC7QLHN72_large_asana-logo.png?ts=1634251468&cs=1e248e039a918e50",
+            name: "Asana",
+            des: "Project management"
+        },
+        {
+            pic: "https://dl.airtable.com/SfHOCYbRISzh1iUiPPoU_basecamp.png?ts=1634251468&cs=c68b924f144e3fc4",
+            name: "Basecamp",
+            des: "Project management"
+        },
+        {
+            pic:"https://dl.airtable.com/1VSlyLsjQneijX2Pabqw_box_128.png?ts=1634251468&cs=077640d6364972f6" ,
+            name: "Box",
+            des: "File management"
+        },
+        {
+            pic: "https://dl.airtable.com/OcRpR1ReRbWuJ1iXyNOx_dropbox.png?ts=1634251468&cs=078b45e28dea670c",
+            name: "Dropbax",
+            des: "File management"
+        },
+        {
+            pic: "https://dl.airtable.com/zFhU2nrMTOaNT89LVOHr_01c965c4215e4003b6dd573484563457.128x128.png?ts=1634251468&cs=a10ef361cbc82bc9",
+            name: "Email",
+            des: "Communication"
+        },
+        {
+            pic: "https://dl.airtable.com/WwZSYAgATc2MhxKE12G5_eventbrite.png?ts=1634251468&cs=8cd911fd8838a89b",
+            name: "Eventbrite",
+            des: "Events"
+        },
+        {
+            pic: "https://dl.airtable.com/qPBHl5QgmDY1waCU0bA7_mailchimp_128.png?ts=1634251468&cs=3145b0f94922ab38",
+            name: "Meetup",
+            des: "Bookmarking"
+        },
+        {
+            pic: "https://dl.airtable.com/n7kufGa3RCSvxyibJHv8_trello_128.png?ts=1634251468&cs=8eb8d29e1f710ca2",
+            name: "Slack",
+            des: "Communication"
+        },
+        {
+            pic: "https://dl.airtable.com/T1CNW8N0RGWWbpKr0jX1_meetup_128.png?ts=1634251468&cs=f7a3df33d9903150",
+            name: "SMs",
+            des: "Communication"
+        },
+        {
+            pic: "https://dl.airtable.com/56GUbLYyTkmtr0d00yBK_imgres.png?ts=1634251468&cs=d22fe6466717e177",
+            name: "SoundCloud",
+            des: "Media"
+        },
+        {
+            pic: "https://dl.airtable.com/8IGU4i1jRsWtJJrBAJ8w_b523efd94dc14a7c82d2033a8c16c6dd.128x128.png?ts=1634251468&cs=01b15292202aef20",
+            name: "Stripe",
+            des: "Payements"
+        },
+        {
+            pic: "https://dl.airtable.com/n7kufGa3RCSvxyibJHv8_trello_128.png?ts=1634251468&cs=8eb8d29e1f710ca2",
+            name: "Trello",
+            des: "Project Management"
+        },
+        {
+            pic: "https://dl.airtable.com/DL24dEHSl6uLvaNCYqVw_e833af1046e989b5d65833e955b34d4f.128x128.png?ts=1634251468&cs=5fd1862278b3712c",
+            name: "Tumblr",
+            des: "Social networking"
+        },
+        {
+            pic: "https://dl.airtable.com/UYhmRG9RYeU2JABAhFg4_evernote.png?ts=1634251468&cs=24879e62cfea66e8",
+            name: "Evernote",
+            des: "File managemment"
+        },
+        {
+            pic:"https://dl.airtable.com/zZbveDfjRAe2AfAA4Bc9_facebook_128.png?ts=1634251468&cs=95c90c2db94177fb" ,
+            name: "Facebook",
+            des: "Social networking"
+        },
+        {
+            pic: "https://dl.airtable.com/alDBWEiNRSupPmeRcy6R_github_128.png?ts=1634251468&cs=65233e5eed27c7f4",
+            name: "Github",
+            des: "Development"
+        },
+        {
+            pic: "https://dl.airtable.com/Ns0nRkS0T7icxYXQzv0X_gmail_128.png?ts=1634251468&cs=399b45ea24fe0d70",
+            name: "Gmail",
+            des: "Communication"
+        },
+        {
+            pic: "https://dl.airtable.com/WwZSYAgATc2MhxKE12G5_eventbrite.png?ts=1634251468&cs=8cd911fd8838a89b",
+            name: "Evernote",
+            des: "File managemment"
+        },
+        {
+            pic: "https://dl.airtable.com/Q0w7mSVGTaGAeD1FZHeP_8c444688f7e165fecc1d56b6b53d2abe.128x128.png?ts=1634251468&cs=c5d7da797e256318",
+            name: "Google Contacts",
+            des: 'Events'
+        },
+        {
+            pic: "https://dl.airtable.com/iuykgtWQTNSGXf1d0JH7_google_contacts.png?ts=1634251468&cs=44b410054881fda3",
+            name: "google Drive",
+            des: "File management"
+        },
+        {
+            pic: "https://dl.airtable.com/mGluZBuGSNe5MBGs0fLa_gdrive_128.png?ts=1634251468&cs=3fa7eed35d50a3d6",
+            name: "Instagram",
+            des: "Social Networking"
+        },
+        {
+            pic: "https://dl.airtable.com/RbLQdE5TRcGDURVWgfoj_large_instagram-128.png?ts=1634251468&cs=d4f04be4df0267f7",
+            name: "Jotform",
+            des: "Forms"
+        },
+        {
+            pic: "https://dl.airtable.com/.attachmentThumbnails/58055bfc24585edecca68dbc93deff3d/2a2728dd?ts=1634251468&cs=edcd4473537a5ca2",
+            name: "Linkedin",
+            des: "Social Networking"
+        },
+        {
+            pic: "https://dl.airtable.com/YDahj3zBS7KHIvKkc7mx_linkedin_128.png?ts=1634251468&cs=2dfaf2987a8ac3b9",
+            name: "MailChimp",
+            des: "Communication"
+        },
+        {
+            pic: "https://dl.airtable.com/qPBHl5QgmDY1waCU0bA7_mailchimp_128.png?ts=1634251468&cs=3145b0f94922ab38",
+            name: "Meetup",
+            des: "Bookmarking"
+        },
+        {
+            pic: "https://dl.airtable.com/n7kufGa3RCSvxyibJHv8_trello_128.png?ts=1634251468&cs=8eb8d29e1f710ca2",
+            name: "Slack",
+            des: "Communication"
+        },
+        {
+            pic: "https://dl.airtable.com/T1CNW8N0RGWWbpKr0jX1_meetup_128.png?ts=1634251468&cs=f7a3df33d9903150",
+            name: "SMs",
+            des: "Communication"
+        },
+        {
+            pic: "https://dl.airtable.com/56GUbLYyTkmtr0d00yBK_imgres.png?ts=1634251468&cs=d22fe6466717e177",
+            name: "SoundCloud",
+            des: "Media"
+        },
+        {
+            pic: "https://dl.airtable.com/8IGU4i1jRsWtJJrBAJ8w_b523efd94dc14a7c82d2033a8c16c6dd.128x128.png?ts=1634251468&cs=01b15292202aef20",
+            name: "Stripe",
+            des: "Payements"
+        },
+        {
+            pic: "https://dl.airtable.com/n7kufGa3RCSvxyibJHv8_trello_128.png?ts=1634251468&cs=8eb8d29e1f710ca2",
+            name: "Trello",
+            des: "Project Management"
+        },
+        {
+            pic: "https://dl.airtable.com/DL24dEHSl6uLvaNCYqVw_e833af1046e989b5d65833e955b34d4f.128x128.png?ts=1634251468&cs=5fd1862278b3712c",
+            name: "Tumblr",
+            des: "Social networking"
+        },
+        {
+            pic: "https://dl.airtable.com/vYkFrRbDRFSGIjmsixzp_dd76d35cbad361c7907a5d44bef8180c.128x128.png?ts=1634251468&cs=718ee488802d7fc7",
+            name: "Twillo",
+            des: "communication"
+        }
+    ]
+array.forEach(function(ele) {
+    let box = document.createElement("div");
+    box.setAttribute("id", "inbox");
+    // let b1 = document.createElement("div");
+    // b1.setAttribute("id", "bb11");
+    // b1.style.backgroundColor="yellow"
+    let pics = document.createElement("img");
+    pics.setAttribute("src", ele.pic); pics.style.width="30%"; 
+    // b1.append(pics);
+    let b2 = document.createElement("div");
+    b2.setAttribute("id", "bb22");
+    let a = document.createElement('h3');
+    a.innerText = ele.name;
+    let b = document.createElement("p");
+    b.innerText = ele.des;
+    console.log(ele.name, ele.des)
+    b2.append(a, b);
+    box.append(pics, b2);
+    document.querySelector("#mid3").append(box);
+})
+</script>
+</html>
