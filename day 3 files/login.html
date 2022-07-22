@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="stylesheet" href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    #main {
+        position: relative;
+    }
+    #main > div {
+        position: absolute;
+        top: 5%;
+        left: 30%;
+        width: 41.5%;
+        height: 88.5%;
+        background-color: white;
+        z-index: 10000;
+        border-radius: 5px;
+    }
+    #inside > div:first-child {
+        text-align: center;
+        background-color: hsla(0,0%,0%,0.05);
+        padding: 23px;
+    }
+    #inner {
+        padding: 35px 60px;
+    }
+    #inn {
+        display: flex;
+        justify-content: space-between;
+    }
+    form {
+        margin-top: 40px;
+    }
+    input {
+        width: 100%;
+        padding: 8px;
+        font-size: 15px;
+        margin: 7px 0px;
+    }
+    form div {
+        text-align: center;
+    }   
+    .iii {
+        border: 1px solid gray;
+        width: 100%;
+        font-size: 15px;
+        padding: 10px;
+        margin-top: 10px;
+    } 
+</style>
+<body>
+    <div id="main">
+        <img src="https://static.airtable.com/images/blurred_base.png" style="width:100%; height: 755px" />
+        <div id="inside">
+            <div>
+                <img src="image/logo.jpg" style="width:25%"/>
+            </div>
+            <div id="inner">
+                <div id="inn">
+                    <div style="display: flex">
+                        <div><h1>Sign in</h1></div>
+                        <div style="margin-top: 18px; margin-left: 20px"><i class="fa fa-lock" aria-hidden="true"></i></div>
+                    </div>
+                    <div style="margin-top: 18px">
+                        <p>or <u><span style="color: blue; font-weight: 500"> create an account</span></u></p>
+                    </div>
+                </div>
+                <form>
+                    <label for="">Email</label> <br>
+                    <input placeholder="name@company.com" type="email" /> <br>
+                    <label for="">Password</label> <br>
+                    <input placeholder="password" type="password" /> <br>
+                    <input type="submit" value="continue" style="margin-top: 20px; width:104%; background-color: blue; border:0px; color: white; padding: 15px" /> <br>
+                    <p style="text-align:center">or</p>
+                    <div>
+                        <div class="iii"><i class="fa fa-google-plus" aria-hidden="true"></i>&nbsp Sign in with <span style="font-weight: 500;"> Google</span></div>
+                        <div class="iii"> Sign in with <span style="font-weight: 500;"> Single Sign On</span></div>
+                        <div class="iii" style="color: gray"><i class="fa fa-apple" aria-hidden="true"></i> &nbsp Sign in with Apple</div>
+                    </div>
+                  </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

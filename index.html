@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airtable</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        font-family: 'spartan', sans-serif;
+    }
+    #container {
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        position: sticky;
+        top: 0;
+        width: 100%;
+    }
+    #container > div:first-child {
+        background-color: #ffe6e6;
+        text-align: center;
+        padding: 11px;
+        font-size: 14px;
+        font-weight: 100;
+    }
+    #container span {
+        color: #b30047;
+        font-weight: 600;
+    } 
+    #container > div:last-child {
+        /* background-color: yellow; */
+        display: flex;
+        justify-content: space-between;
+        padding: 17px 0px;
+        background-color: white;
+    } 
+    #first {
+        /* background-color: aqua; */
+        display: flex;
+        align-items: center;
+    }
+    #first > img {
+        width: 20%;
+        margin: 0px 20px;
+    }
+    #second {
+        /* background-color: #b30047; */
+        display: flex;
+        align-items: center;
+    }
+    #container button {
+        margin : 0px 10px;
+        font-weight: 600;
+        font-size: 16px;
+        background-color: white;
+        border: 0px;
+
+    }
+    #second > button {
+        padding : 9px;
+        border-radius: 10px;
+        font-size: 17px;
+    }
+    #second > button:nth-child(2) {
+        color: white;
+        background-color: blue;
+        border: 0px;
+    }
+    #second > button:last-child {
+        border: 0px white;
+    }
+    #second > button:first-child {
+        border: 1px solid black;
+    }
+    #mid {
+        display: flex;
+        background-color: #e6f2ff;
+        padding-top: 150px;
+        
+    }
+    #mid div:first-child {
+        /* background-color: aqua; */
+        width: 39%;
+        color: rgb(46, 46, 46);
+        
+        margin-left: 180px;
+        margin-right: 45px;
+    }
+    #mid h1 {
+        font-size: 70px;
+        margin-bottom: 30px;
+    }
+    #mid p {
+        font-size: 27px;
+        font-weight: 500;
+    }
+    #mid button {
+        margin-top: 45px;
+        color:white;
+        background-color: rgb(40, 40, 243);
+        border-radius: 15px;
+        padding: 15px;
+        font-size: 25px;
+        border: 0px;
+        font-weight: 600;
+        margin-bottom: 105px;
+
+    }
+    #q {
+        text-align: center;
+        margin: 40px;
+    }
+    #mid1 {
+        text-align: center;
+        font-size: 30px;
+        color: rgb(46, 46, 46);
+        padding: 50px 457px;
+        background-color: #e6e6e6;
+    }
+    #mid2, #mid3{
+        display: flex;
+        background-color: #faf2f4;;
+        padding: 100px 200px;
+        
+    }
+    #mid2 h1, #mid3 h1{
+        font-size: 47px;
+        margin-bottom: 24px;
+    }
+    #mid2 div:first-child {
+        width: 39%;
+        color: rgb(46, 46, 46);
+        margin-right: 45px;
+        margin-top: 80px;
+    }
+    #mid2 p, #mid3 p, #mid4 p{
+        font-size: 19px;
+        margin-bottom: 53px;
+    }
+    #mid2 button, #mid3 button:last-child, #mid4 button{
+        color: blue;
+        background-color: #faf2f4;;
+        font-size: 18.5px;
+        border: 0px;
+        font-weight: 600;
+        margin-bottom: 105px;
+
+    }
+    #mid3 div:last-child {
+        width: 39%;
+        color: rgb(46, 46, 46);
+        margin-left: 80px;
+        margin-top: 80px;
+    }
+    #new {
+        background-color: #6600cc;
+        font-size: 15px;
+        border-radius: 14px;
+        color: white;
+        font-weight: 500;
+        padding: 7px;
+        border: 0px;
+        margin-bottom: 23px;
+    }
+    #mid4 {
+        display: flex;
+        background-color: #faf2f4;;
+        padding: 0px 200px;
+    }
+    #mid4 div:first-child {
+        width: 39%;
+        color: rgb(46, 46, 46);
+        margin-right: 45px;
+    }
+    #mid4 h1 {
+        font-size: 50px;
+    }
+    #mid4 div:last-child {
+        width: 50%;
+        margin-left: 80px;
+        padding-left: 40px;
+    }
+    #mid4 P {
+        font-size: 21px;
+        margin-bottom: 45px;
+    }
+    #mid5  img {
+        width: 100%;
+    }
+    #mid5 > div {
+        background-color: #faf2f4;;
+        padding : 0px 180px 50px 180px;
+    }
+    #mid6 {
+        display: flex;
+        background-color: #faf5e8;
+        padding: 100px 260px;
+    }
+    #mid6 > div:first-child {
+        width: 60%;
+        margin-right: 30%;
+        font-size: 26px;
+    }
+    #mid6 > div:last-child {
+        width: 50%;
+        display: flex;
+        align-items: flex-end;
+        padding-left: 100px;
+        
+    }
+    #mid6 button {
+        color: blue;
+        background-color: #faf2f4;;
+        font-size: 18.5px;
+        border: 0px;
+        font-weight: 600;
+    }
+    #mid7 {
+        display: flex;
+        background-color: #faf5e8;
+        /* padding: -30px 260px 60px 260px; */
+    }
+    #mid7 > div {
+        /* height: 220px; */
+        width: 65%;
+        margin: auto;
+        margin-top: -50px;
+        display: flex;
+        margin-bottom: 90px;
+    }
+    #mid7 > div > div {
+        width: 50%;
+        background-color: white;
+    }
+    #ins {
+        padding: 50px 60px 0px 50px;
+        line-height: 34px;
+    }
+    #ins h2 {
+        margin-bottom: 30px;
+        color: rgb(46, 46, 46);
+    }
+    #ins p {
+        margin-top: -10px;
+        color: rgb(46, 46, 46);
+    }
+    #ins button {
+        color: blue;
+        background-color: white;
+        font-size: 18.5px;
+        border: 0px;
+        font-weight: 600;
+        margin-top: 40px ;
+        background-color: white;
+    }
+    #mid8 {
+        display: flex;
+    }
+    #mid8 > div {
+        width: 50%;
+        margin: auto;
+        text-align: center;
+        font-size: 30px;
+        font-family: HaasText,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+        color: rgb(46, 46, 46);
+        margin-top: 80px;
+    }
+    #mid8 button {
+        margin-top: 45px;
+        color:white;
+        background-color: rgb(40, 40, 243);
+        border-radius: 15px;
+        padding: 15px;
+        font-size: 25px;
+        border: 0px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    #mid8 p {
+        margin-bottom: 50px;
+    }
+</style>
+<body>
+    <div id="container">
+        <div>Learn how to build visual and interactive apps using Interface Designer <span> &nbsp Watch webinar ></span></div>
+        <div>
+            <div id="first">
+                <img src="image/logo.jpg" />
+                <button>Product ></button>
+                <button>Solutions ></button>
+                <button>Pricing</button>
+                <button>Enterprise</button>
+                <button>Resources ></button>
+            </div>
+            <div id="second">
+                <button>Contact sales</button>
+                <button>Sign up for free</button>
+                <button>Sign in</button>
+            </div>
+        </div>
+    </div>
+    <div id="mid">
+        <div>
+            <h1>Connect everything. Achieve anything.</h1>
+            <p>Accelerate work and unlock potential with powerful apps that connect your data, workflows and teams. This is how</p> 
+            <button>Sign up for free</button>
+        </div>
+        <div>
+            <video width="660" height="500" muted autoplay preload="auto" playsinline loop >
+                <source src="https://videos.ctfassets.net/wl95ljfippl8/4mknj7oTndciGSdFtTDjZq/adcfe61bb0700d98af81f1f47e72a787/Homepage_Brand_Video_May_2022_V2.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <div id="q">
+        <img src="https://www.airtable.com/images/about/logos-horizontal.png" style="width: 90%;" />
+    </div>
+    <div id="mid1">
+        <div>
+            <h1>Create solutions that mirror your business</h1>
+        </div>
+        <P style="font-size:20px; margin-top: 25px; margin-bottom: 50px;">Move work forward faster with no-code apps that perfectly match your team’s agility and scale.</P>
+    </div>
+    <div id="mid2">
+        <div>
+            <h1>Unite every stream of work</h1>
+            <p>Create a single source of truth that’s tailored precisely to how your teams work. Include everything you need, nothing you don’t.</p> 
+            <button>Explore the product →</button>
+        </div>
+        <div>
+            <video width="660" height="500" muted autoplay preload="auto" playsinline loop >
+                <source src="https://static.airtable.com/images/homescreen/Homepage_Anim_02_Unite_FINAL.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <div id="mid3">
+        <div>
+            <video width="660" height="500" muted autoplay preload="auto" playsinline loop >
+                <source src="https://static.airtable.com/images/homescreen/Homepage_Anim_03_TurnInformation_FINAL.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div>
+            <button id="new">NEW</button>
+            <h1>Interface with work in a new way</h1>
+            <p>Create custom interfaces that give each and every teammate the relevant information they need, and a simple way to take action.</p> 
+            <button>Learn more about Interface Designer →</button>
+        </div>
+    </div>
+    <div id="mid4">
+        <div>
+            <h1>Bring all your data together</h1>
+        </div>
+        <div>
+            <p>All your information. Always up to date. At your fingertips. Keep everything in sync across your organization.</p>
+            <button>Learn about Sync →</button>
+        </div>
+    </div>
+    <div id="mid5">
+        <div>
+            <img src="https://static.airtable.com/images/homescreen/homepage-sync.jpg" />
+        </div>
+    </div>
+    <div id="mid2" style="background-color: #FBFBFC">
+        <div>
+            <h1>Get started quickly</h1>
+            <p style="font-size: 22px">Begin building on day one. Airtable’s pre-made templates and intuitive design help you tackle even your most complex needs, right away.</p> 
+        </div>
+        <div>
+            <video width="660" height="500" muted autoplay preload="auto" playsinline loop >
+                <source src="https://static.airtable.com/images/homescreen/Homepage_Anim_05_GainPerspective_FINAL.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <div id="mid3" style="background-color: #FBFBFC">
+        <div>
+            <video width="660" height="500" muted autoplay preload="auto" playsinline loop >
+                <source src="https://static.airtable.com/images/homescreen/Homepage_Anim_03_TurnInformation_FINAL.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div>
+            <button id="new">NEW</button>
+            <h1>Transform how teams work at scale</h1>
+            <p style="font-size: 22px">Discover deep integrations, advanced extensibility, expert support everything your organization needs to reach new heights.</p> 
+        </div>
+    </div>
+    <div id="mid6">
+        <div>
+            <h1>Trusted by teams from all industries</h1>
+        </div>
+        <div>
+            <button>Read all customer stories →</button>
+        </div>
+    </div>
+    <div id="mid7">
+        <div>
+            <div style="background-color: #faf5e8; padding-bottom: -5px;">
+                <img src="https://static.airtable.com/images/homescreen/homepage-bakerhughes-portrait.jpg" style="width: 100%" />
+            </div>
+            <div id="ins">
+                <img src="https://static.airtable.com/images/homescreen/BakerHughes-logo.png" style="width: 40%; margin-bottom: 25px;"/>
+                <h2>“A business transformation is really just a series of smaller changes rolling out one after the other. It’s about getting the right information to people when they need it. What started as an Airtable calendar very quickly became the solution that we use to manage everything.”</h2>
+                <h3>Stephanie Hartgrove </h3>
+                <p>VP of Global Communications, Baker Hughes</p>
+                <button>Watch video →</button>
+            </div>
+        </div>
+    </div>
+    <div id="mid8">
+        <div>
+            <h1>250,000+ innovative companies use Airtable every day. Join them.</h1>
+            <button>Sign up for free</button>
+            <p>No credit card needed</p>
+        </div>
+    </div>
+</body>
+</html>
