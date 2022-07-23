@@ -58,6 +58,15 @@
         padding: 10px;
         margin-top: 10px;
     } 
+    input[type="submit"]:hover {
+        background-color: rgb(0, 183, 255);
+    }
+    input[type="email"]:hover, input[type="password"]:hover {
+        background-color: rgb(201, 196, 196);
+    }
+    input[type="submit"] {
+        background-color: blue;
+    }
 </style>
 <body>
     <div id="main">
@@ -78,10 +87,10 @@
                 </div>
                 <form>
                     <label for="">Email</label> <br>
-                    <input placeholder="name@company.com" type="email" /> <br>
-                    <label for="">Password</label> <br>
-                    <input placeholder="password" type="password" /> <br>
-                    <input type="submit" value="continue" style="margin-top: 20px; width:104%; background-color: blue; border:0px; color: white; padding: 15px" /> <br>
+                    <input id="em" placeholder="name@company.com" type="email" /> <br>
+                    <label  for="">Password</label> <br>
+                    <input  id="pass" placeholder="password" type="password" /> <br>
+                    <input type="submit" value="continue" style="margin-top: 20px; width:104%; border:0px; color: white; padding: 15px" /> <br>
                     <p style="text-align:center">or</p>
                     <div>
                         <div class="iii"><i class="fa fa-google-plus" aria-hidden="true"></i>&nbsp Sign in with <span style="font-weight: 500;"> Google</span></div>
@@ -94,3 +103,21 @@
     </div>
 </body>
 </html>
+<script>
+    document.querySelector("form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        let email = document.querySelector("#em").value;
+        let passw = document.querySelector("#pass").value;
+        console.log(email, passw);
+        // localStorage.setItem("emaill", email);
+        // localStorage.setItem("passwordd", passw);
+        console.log(email, passw);
+        if(email == "sanuatmasai@gmail.com" && passw == "12345") {
+            alert("Login Successful !")
+            window.location.href = "index.html";
+        }else {
+            alert("User Not Available !")
+            window.location.href = "signup.html";
+        }
+    });
+</script>

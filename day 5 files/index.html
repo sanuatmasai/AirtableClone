@@ -384,6 +384,36 @@
     #part1 > img {
         width: 50%;
     }
+    #first span > button:hover {
+        color: blue;
+
+    }
+    .hover-underline-animation {
+        display: inline-block;
+        position: relative;
+        /* color: 
+        #0087ca; */
+        color: black
+    }
+
+    .hover-underline-animation:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: 
+        #0087ca;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+
+    .hover-underline-animation:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
 </style>
 <body>
     <div id="container">
@@ -429,7 +459,7 @@
                 
             
                   <!-- Use any element to open the sidenav -->
-                  <span onclick="openNav()"><button>Product ></button></span>
+                  <span onclick="openNav()"><button class="hover-underline-animation">Product ></button></span>
                 <!-- <div id="mySidenav" class="sidenav"> -->
                     <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                     <a href="#">About</a>
@@ -439,7 +469,7 @@
                 <!-- </div> -->
             
                   <!-- Use any element to open the sidenav -->
-                  <span onclick="openNav()"><button>Solutions ></button></span>
+                  <span onclick="openNav()"><button class="hover-underline-animation">Solutions ></button></span>
                 <!-- div id="mySidenav" class="sidenav">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                     <a href="#">About</a>
@@ -449,7 +479,7 @@
                 </div> -->
             
                   <!-- Use any element to open the sidenav -->
-                  <span onclick="openNav()"><button>Pricing</button></span>
+                  <span onclick="openNav()"><button class="hover-underline-animation">Pricing</button></span>
                 <!-- <div id="mySidenav" class="sidenav">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                     <a href="#">About</a>
@@ -459,7 +489,7 @@
                 </div> -->
             
                   <!-- Use any element to open the sidenav -->
-                  <span onclick="openNav2()"><button>Enterprise</button></span>
+                  <span onclick="openNav2()"><button class="hover-underline-animation">Enterprise</button></span>
                 <div id="mySidenav2" class="sidenav">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
                     <a href="C:\Users\SANU 21\Desktop\unit2 construct week\snowy-giraffe-7210\day 4 files\marketing.html"><div>
@@ -501,12 +531,12 @@
                     
             
                   <!-- Use any element to open the sidenav -->
-                  <span onclick="openNav()"><button>Resources ></button></span>
+                  <span onclick="openNav()"><button class="hover-underline-animation">Resources ></button></span>
             </div>
             <div id="second">
                 <button>Contact sales</button>
                 <button>Sign up for free</button>
-                <a href="C:\Users\SANU 21\Desktop\unit2 construct week\snowy-giraffe-7210\day 3 files\login.html"> <button>Sign in</button></a>
+                <a href="C:\Users\SANU 21\Desktop\new new\day 5 files\login.html"> <button>Sign in</button></a>
             </div>
         </div>
     </div>

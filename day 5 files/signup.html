@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
+    <title>Sign in</title>
     <link rel="stylesheet" href=
 "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -43,7 +43,6 @@
         margin-top: 40px;
     }
     input {
-        width: 100%;
         padding: 8px;
         font-size: 15px;
         margin: 7px 0px;
@@ -58,6 +57,15 @@
         padding: 10px;
         margin-top: 10px;
     } 
+    input[type="submit"]:hover {
+        background-color: rgb(0, 183, 255);
+    }
+    input[type="submit"] {
+        background-color: blue;
+    }
+    input[type="email"]:hover{
+        background-color: rgb(201, 196, 196);
+    }
 </style>
 <body>
     <div id="main">
@@ -67,30 +75,38 @@
                 <img src="image/logo.jpg" style="width:25%"/>
             </div>
             <div id="inner">
-                <div id="inn">
-                    <div style="display: flex">
-                        <div><h1>Sign in</h1></div>
-                        <div style="margin-top: 18px; margin-left: 20px"><i class="fa fa-lock" aria-hidden="true"></i></div>
-                    </div>
-                    <div style="margin-top: 18px">
-                        <a href="C:\Users\SANU 21\Desktop\unit2 construct week\snowy-giraffe-7210\day 3 files\signup.html" style="text-decoration: none"> <p> or <u style="color: blue"><span style="color: blue; font-weight: 500"> create an account</span></u></p></a>
-                    </div>
-                </div>
+                <h1> Create your free account</h1>
                 <form>
-                    <label for="">Email</label> <br>
-                    <input placeholder="name@company.com" type="email" /> <br>
-                    <label for="">Password</label> <br>
-                    <input placeholder="password" type="password" /> <br>
-                    <input type="submit" value="continue" style="margin-top: 20px; width:104%; background-color: blue; border:0px; color: white; padding: 15px" /> <br>
+                    <label for="">Work email</label> <br>
+                    <input id="em" placeholder="name@company.com" type="email" style= "width:50%"/> 
+                    <input type="submit" value="continue" style="border:0px; color: white; padding:11px 60px; margin-left: 25px;" /> <br>
                     <p style="text-align:center">or</p>
                     <div>
                         <div class="iii"><i class="fa fa-google-plus" aria-hidden="true"></i>&nbsp Sign in with <span style="font-weight: 500;"> Google</span></div>
                         <div class="iii"> Sign in with <span style="font-weight: 500;"> Single Sign On</span></div>
                         <div class="iii" style="color: gray"><i class="fa fa-apple" aria-hidden="true"></i> &nbsp Sign in with Apple</div>
                     </div>
-                  </form>
+                    <p style="font-size: 13px; margin-bottom: 30px; text-align: center; margin-top: 10px;">By signing up, you agree to the Terms of Service and Privacy Policy.</p>
+                    <p style="font-size: 15px; text-align: center;">Already have an account? <a href="C:\Users\SANU 21\Desktop\unit2 construct week\snowy-giraffe-7210\day 3 files\login.html"><u style="color: blue"><span style="color: blue; font-weight: 500"> Sign in</span></u></a></p>
+                </form>
+
             </div>
         </div>
     </div>
 </body>
 </html>
+<script>
+    console.log("sanu");
+    document.querySelector("form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        let email = document.querySelector("#em").value;
+        console.log(email);
+        localStorage.setItem("emaill", email);
+        if(email == "sanuatmasai@gmail.com") {
+            alert(" HURRAY User Created Successfully !")
+            window.location.href = "login.html";
+        }else {
+            alert("invalid email id !")
+        }
+    });
+</script>
